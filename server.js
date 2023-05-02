@@ -1,6 +1,7 @@
 require("dotenv").config()
 const mongoose = require("mongoose")
 const express = require("express")
+const cors = require("cors")
 
 const admin = require("firebase-admin");
 const serviceAccount = require("./serviceAaccount.json");
@@ -15,6 +16,9 @@ module.exports = {admin:admin}
 const App = express()
 
 //midlleware
+App.use(cors());
+
+
 App.use(express.json())
 
 App.use((req,res,next)=>{
