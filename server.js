@@ -17,6 +17,15 @@ const App = express()
 //midlleware
 App.use(express.json())
 
+App.use((req,res,next)=>{
+  res.header("Access-Control-Allow-Origin", "*")
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With,Content-Type, Accept"
+  )
+  next()
+})
+
 
 //establishing router
 const travelLogRoutes = require("./routes/travelLogRoutes")
