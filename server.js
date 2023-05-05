@@ -21,14 +21,14 @@ App.use(cors());
 
 App.use(express.json())
 
-App.use((req,res,next)=>{
-  res.header("Access-Control-Allow-Origin", "*")
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With,Content-Type, Accept"
-  )
-  next()
-})
+// App.use((req,res,next)=>{
+//   res.header("Access-Control-Allow-Origin", "*")
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With,Content-Type, Accept"
+//   )
+//   next()
+// })
 
 
 //establishing router
